@@ -60,10 +60,6 @@ export default {
     '$route.name' (to, from) {
       if (to !== from) this.navs++
     }
-  },
-
-  beforeMount() {
-    this.$getResource('blog')
   }
 }
 </script>

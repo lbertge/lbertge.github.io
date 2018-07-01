@@ -1,7 +1,7 @@
 export default {
   blog() {
     return {
-      path: '/blog.json',
+      path: 'blog.json',
       resolve: (response, mappers) => {
         let blog = response.results[0]
         return mappers.merge({

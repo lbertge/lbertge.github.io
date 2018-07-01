@@ -22,7 +22,7 @@ gulp.task('watch', function () {
                 return console.log(err)
             }
             const result = yamlFront.loadFront(data)
-            result.__content = marked.parse(result.__content)
+            result.content = marked.parse(result.__content)
             result.published = Date()
             obj.results.push(result)
 

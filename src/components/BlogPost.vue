@@ -34,7 +34,6 @@ export default {
       content: '',
       published: '',
       description: '',
-      formula: '$x=0$',
       commentsReady: false
     }
   },
@@ -69,7 +68,12 @@ export default {
   },
 
   updated() {
-    window.MathJax.Hub.Queue(['Typeset', window.MathJax.Hub])
+    // this throws an error for some reason, even though I'm pretty sure it works
+    try {
+      window.MathJax.Hub.Queue(['Typeset', window.MathJax.Hub])
+    } catch (error) {
+      // silently fail
+    }
   }
 
 }
