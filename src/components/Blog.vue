@@ -1,13 +1,15 @@
 <template>
   <main class="blog" :class="{ 'blog--reading': this.post }">
     <blog-nav :content="content" :filters="filters" :navs="navs"/>
-    <div v-if="!about">
-      <blog-feed :filters="filters"/>
-      <blog-post :post="post"/>
-    </div>
-    <div v-else>
-      <blog-about/>
-    </div>
+    <transition name="slide-fade" mode="out-in"> 
+      <div v-if="!about">
+        <blog-feed :filters="filters"/>
+        <blog-post :post="post"/>
+      </div>
+      <div v-else>
+        <blog-about/>
+      </div>
+    </transition>
 
     <blog-footer/>
   </main>
@@ -22,7 +24,14 @@ import BlogAbout from './BlogAbout'
 
 export default {
   name: 'blog',
-  components: { BlogNav, BlogFeed, BlogPost, BlogFooter, BlogAbout },
+  components: {
+    BlogNav,
+    BlogFeed,
+    BlogPost,
+    BlogFooter,
+    BlogAbout
+  },
+
   resource: 'Blog',
   props: {
     post: String,

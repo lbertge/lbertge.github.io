@@ -7,6 +7,8 @@ import * as resources from './resources'
 import resource from './plugins/resource'
 import deviceQueries from './plugins/device-queries'
 import VueHighlightJS from 'vue-highlightjs'
+import './assets/css/github-markdown.css'
+import 'highlight.js/styles/tomorrow-night-eighties.css'
 
 Vue.config.productionTip = false
 

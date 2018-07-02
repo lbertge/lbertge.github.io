@@ -1,5 +1,7 @@
 <template>
-  <transition name="slide-fade" mode="out-in">
+  <!-- <transition name="post"> -->
+  <!-- <transition name="slide-fade" mode="out-in"> -->
+    <!-- <article class="post"> -->
       <section class="post__body rte">
         <p>
               I am a software engineer at Abbvie Stemcentrx.
@@ -21,9 +23,9 @@
           ... prompt'''
           </code>
         </pre>
-        <pre v-highlightjs><code class="javascript">const s = new Date().toString()</code></pre>
       </section>
-  </transition>
+    <!-- </article> -->
+  <!-- </transition> -->
 </template>
 
 <script>

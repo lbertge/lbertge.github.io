@@ -60,9 +60,18 @@ export default {
 
   beforeMount() {
     if (!this.post) return;
-    window.MathJax.Hub.Config({
-      tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    })
+    const that = this;
+    fetch('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML')
+      .then(res => {
+        that.$nextTick(() => {
+          window.MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+          })
+          window.MathJax.Hub.Queue(['Typeset', window.MathJax.Hub])
+        })
+      }
+    )
+
     this.$getResource('post', this.post)
       .then(this.showComments)
   },
