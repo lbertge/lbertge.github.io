@@ -12,3 +12,7 @@
   margin: 0 auto;
   margin-bottom: 2rem;
 }
+
+.post .content:not(.custom) > *:first-child {
+  margin-top: 0rem;
+}

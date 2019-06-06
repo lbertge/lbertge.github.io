@@ -26,22 +26,19 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .post .content {
   padding: 0 1.5rem 0;
   max-width: var(--content-width);
 }
 
-.page .content .default {
-  padding: 0 1.5rem 0;
-}
-
 .post .content:not(.custom) > h1:first-child {
   margin-bottom: 0 !important;
+  margin-top: 0rem;
 }
 
 .post .content:not(.custom) > *:first-child {
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .post .content.header{

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="content">
+    <div class="content" style="padding: 5rem 2.5rem;">
       <TagBadges :tags="[tagName]"/>
       <Archive :groupByYear="false" :filter="filterByTag"/>
     </div>
