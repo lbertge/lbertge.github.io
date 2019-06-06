@@ -30,4 +30,8 @@ export default {
 .tags {
   padding-left: 1.2em;
 }
+
+.content {
+  padding: 5rem 2.5rem;
+}
 </style>

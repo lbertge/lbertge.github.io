@@ -26,10 +26,14 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 .post .content {
   padding: 0 1.5rem 0;
   max-width: var(--content-width);
+}
+
+.page .content .default {
+  padding: 0 1.5rem 0;
 }
 
 .post .content:not(.custom) > h1:first-child {
