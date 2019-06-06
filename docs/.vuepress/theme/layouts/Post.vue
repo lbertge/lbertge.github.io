@@ -26,7 +26,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .post .content {
   padding: 0 1.5rem 0;
   max-width: var(--content-width);
