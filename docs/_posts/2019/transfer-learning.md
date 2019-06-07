@@ -1,11 +1,11 @@
 ---
-title: Transfer Learning on Atari Games
+title: Transfer Learning Project Log
 date: June 06, 2019
 layout: Post
 tags: [rl]
 ---
 
-This is a project log I'm working on.
+This is a log for a project I'm working on.
 
 ## What is a trajectory?
 From [here](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html?highlight=trajectory), we can define a trajectory as
@@ -42,7 +42,7 @@ print(actions.shape, obs.shape)
 
 There's some information that is useful to understanding what's going on. The `action_space` for this environment is of type `Discrete(4)`, so that means there's only four distinct moves to take, and each move is discrete, i.e., all-or-nothing. The `observation_space` is a `Box` with dimensions (210, 160, 12), so observations must follow that exact shape. The size of the dimensions suggests that the observation space are video frames, with length, width, and channel(?) requirements.
 
-::: info
+::: tip info
 Some more digging revealed that the observation_space is shape (210, 160, 12) because of a 4-frame stacking. A call to [VecFrameStack](https://github.com/openai/baselines/blob/master/baselines/run.py#L103) shows that the env feeds a stack of four consecutive frames (since the environment does not have frameskip). At each env step, the stack shifts the frames in the array [backward](https://github.com/openai/baselines/blob/master/baselines/common/vec_env/vec_frame_stack.py#L23), and updates the last frame, so at all times the stack maintains a rolling snapshot of the frames. 
 :::
 
