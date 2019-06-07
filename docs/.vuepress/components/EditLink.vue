@@ -20,7 +20,7 @@ import { normalize, endingSlashRE } from '@vuepress/theme-default/util'
         }
         const parts = path.split("/")
         path = parts[parts.length - 1]
-        return `https://github.com/darrenjennings/guuu.io/blob/master/${editLinkPath || `docs/_posts/${path}`}`
+        return `https://github.com/lbertge/lbertge.github.io/blob/master/${editLinkPath || `docs/_posts/${path}`}`
       }
     },
   }
