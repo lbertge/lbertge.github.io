@@ -59,3 +59,5 @@ Each dimension is a sinusoid, with the wavelengths forming a geometric progressi
 * Less total computation complexity per layer
 * Increased parallelized computations
 * Trying to learn-range dependencies is the crux of sequence transduction tasks. Forward and backward signals have to traverse the network, so the shorter the paths between a pair of positions, the easier to learn long-range dependencies.
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
